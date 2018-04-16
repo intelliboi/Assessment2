@@ -1,0 +1,114 @@
+/* begin general styling */
+
+body {
+  font-family: Helvetica;
+  background-color: white;
+  color: #333;
+  position: relative;
+  top: 100px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* end general styling */
+/* begin header styling */
+
+header {
+  font-weight: bold;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header ul {
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+header li {
+  color: #FFF;
+  font-size: 16px;
+  display: inline-block;
+  width: 24%;
+}
+
+header li:hover {
+  color: #DDD;
+}
+
+/* end header styling */
+/* begin form styling */
+
+form {
+  /* needed to set font size to zero to remove
+  auto padding between inline input elements */
+  font-size: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  max-width: 500px;
+  min-width: 200px;
+  background: #DDD;
+}
+
+form > div {
+  text-align: center;
+  width: 90%;
+  display: inline-block;
+  margin: 10px;
+}
+
+input {
+  box-sizing: border-box;
+  width: 98%;
+  margin-right: 2%;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 1%;
+  margin-top: 5px;
+}
+
+form p {
+  font-size: 18px;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+.name input {
+  width: 48%;
+}
+
+.birthday input {
+  width: 31.33%;
+}
+
+.submitButton input {
+  margin-top: 50px;
+  background: green;
+  font: 20px;
+  color: white;
+}
+
+input:hover {
+  border: 1px solid black;
+}
+
+p.error {
+  color: red;
+  font-size: 10px;
+  margin: 5px auto;
+}
+
+/* end form styling */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li>Search</li>
+        <li>Results</li>
+        <li>Item</li>
+        <li><a href="signup.html" target='_blank'>Registration</a></li>
+      </ul>
+    </header>
+    <div class="welcome">
+      <h1>To save your favourite wifi hotspots, please enter your details below:</h1>
+    </div>
+
+    <div id="form_page">
+      <form>
+        <div class="name">
+          <p>Name:</p>
+          <input type="text" id="firstname" placeholder="First">
+          <input type="text" id="lastname" placeholder="Last">
+          <p class="error"></p>
+        </div>
+
+        <div class="email">
+          <p>Email:</p>
+          <input type="text" id="email" placeholder="example@gmail.com">
+          <p class="error"></p>
+        </div>
+
+        <div class="phone">
+          <p>Mobile:</p>
+          <input type="tel" id="phone" placeholder="0455 555 555">
+          <p class="error"></p>
+        </div>
+
+        <div class="birthday">
+          <p>Birthday:</p>
+          <input type="number" id="day" placeholder="Day">
+          <input type="number" id="month" placeholder="Month">
+          <input type="number" id="year" placeholder="Year">
+          <p class="error"></p>
+        </div>
+
+        <div class="password">
+          <p>Create a Password:</p>
+          <input type="password" id="password" placeholder="Password">
+          <input type="password" id="confirm" placeholder="Confirm Password">
+          <p class="error"></p>
+        </div>
+
+        <div class="submitButton">
+          <input type="button" id="submit" value="Submit" onclick="checkForm()">
+          <p class="error"></p>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript" src="JS/validation.js"></script>
+  </body>
+</html>
