@@ -30,10 +30,13 @@ function checkForm() {
 }
 
 function checkName(name, element) {
+	
+  //Fix malicious strings
+  name = injectionProtection(name)	
+  
   if (name === "") {
     // name is blank
-    document.querySelector(".name p.error").innerHTML =
-    "Please enter your name";
+    document.querySelector(".name p.error").innerHTML = "Please enter your name";
     bad(element);
 
   } else if (/^[a-zA-Z \'\-]*$/g.test(name) === false) {
@@ -58,6 +61,10 @@ function checkName(name, element) {
 }
 
 function checkEmail(email, element) {
+	
+  //Fix malicious strings
+  email = injectionProtection(email)
+  
   if (email === "") {
     // email is blank
     document.querySelector(".email p.error").innerHTML =
@@ -80,6 +87,11 @@ function checkEmail(email, element) {
 }
 
 function checkMobile(phone, element) {
+	
+  //Fix malicious strings
+  phone = injectionProtection(phone)
+
+  
   if (phone === "") {
     // phone number is blank
     document.querySelector(".phone p.error").innerHTML =
@@ -110,7 +122,7 @@ function checkBirthday(day, month, year) {
   //Fix malicious strings
   day = injectionProtection(day)
   month = injectionProtection(month)
-  yeahr = injectionProtection(year)
+  year = injectionProtection(year)
 	
   if (day === "" || month === "" || year === "") {
     // if day, month, or year are left blank
