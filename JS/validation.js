@@ -30,10 +30,10 @@ function checkForm() {
 }
 
 function checkName(name, element) {
-	
+
   //Fix malicious strings
-  name = injectionProtection(name)	
-  
+  name = injectionProtection(name);
+
   if (name === "") {
     // name is blank
     document.querySelector(".name p.error").innerHTML = "Please enter your name";
@@ -60,23 +60,23 @@ function checkName(name, element) {
   }
 }
 
-function checkEmail(email, element) {
-	
+function checkEmail(email) {
+
   //Fix malicious strings
-  email = injectionProtection(email)
-  
+  name = injectionProtection(name);
+
   if (email === "") {
     // email is blank
     document.querySelector(".email p.error").innerHTML =
     "Please enter your email address";
-    bad(email);
+    bad("email");
 
     // RegEx testing that email is of the form '___@___.___'
   } else if (/\S+@\S+\.\S+/g.test(email) === false) {
 
     document.querySelector(".email p.error").innerHTML =
     "Your email address is invalid, please try again";
-    bad(email);
+    bad("email");
 
   } else {
 
@@ -87,11 +87,11 @@ function checkEmail(email, element) {
 }
 
 function checkMobile(phone, element) {
-	
-  //Fix malicious strings
-  phone = injectionProtection(phone)
 
-  
+  //Fix malicious strings
+  phone = injectionProtection(phone);
+
+
   if (phone === "") {
     // phone number is blank
     document.querySelector(".phone p.error").innerHTML =
@@ -118,12 +118,12 @@ function checkMobile(phone, element) {
 }
 
 function checkBirthday(day, month, year) {
-	
+
   //Fix malicious strings
-  day = injectionProtection(day)
-  month = injectionProtection(month)
-  year = injectionProtection(year)
-	
+  day = injectionProtection(day);
+  month = injectionProtection(month);
+  year = injectionProtection(year);
+
   if (day === "" || month === "" || year === "") {
     // if day, month, or year are left blank
     document.querySelector(".birthday p.error").innerHTML =
@@ -241,9 +241,9 @@ function intCheck(intText) {
 
 function checkPassword(password1, password2) {
   //Fix malicious strings
-  password1 = injectionProtection(password1)
-  password2 = injectionProtection(password2)
-  
+  password1 = injectionProtection(password1);
+  password2 = injectionProtection(password2);
+
   // if password is blank
   if (password1 === "") {
     document.querySelector(".password p.error").innerHTML =

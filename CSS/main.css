@@ -6,6 +6,7 @@ body {
   color: #333;
   position: relative;
   top: 100px;
+  margin: 0px;
 }
 
 a {
@@ -34,7 +35,7 @@ header {
 
 header ul {
   margin: 30px auto;
-  padding: 0 20px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -133,8 +134,14 @@ p.error {
     font-weight: bold;
     background-color: #333;
     position: fixed;
-    top: 0;
     width: 1280px;
     z-index: 10;
   }
+}
+
+@media only screen and (max-width: 500px) {
+
+    header {
+        padding-top: 30px;
+    }
 }
