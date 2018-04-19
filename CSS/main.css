@@ -148,6 +148,19 @@ p.error {
 
 }
 
+#searchbox {
+  width: 100%;
+  text-align: right;
+}
+#searchbox input {
+  text-align: right;
+}
+
+#searchbox input[type=button] {
+  text-align: center;
+}
+
+
 /* Responsive Design */
 
 @media only screen and (min-width: 1280px) {
